@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss"
 
-const config: Config = {
-  content: ["./src/components/**/*.{js,vue,ts}"],
+const config: Partial<Config> = {
   theme: {
     extend: {},
   },
