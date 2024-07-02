@@ -15,6 +15,9 @@
   },
   "packageManager": "pnpm@9.4.0+sha256.b6fd0bfda555e7e584ad7e56b30c68b01d5a04f9ee93989f4b93ca8473c49c74",
   "devDependencies": {
-    "prettier-plugin-tailwindcss": "^0.6.5"
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "tailwindcss": "^3.4.4"
   }
 }
