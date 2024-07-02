@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Test from "@/components/test.vue"
+import Home from "@/components/home.vue"
 </script>
 
 <template>
-  <Test />
+  <Home />
 </template>
