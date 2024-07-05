@@ -3,7 +3,7 @@ import Search from "@/components/search.vue"
 </script>
 
 <template>
-  <section class="mb-8 h-full max-h-[640px] bg-rose-200 xl:mb-24">
+  <section class="mb-8 h-full max-h-[640px] xl:mb-24">
     <div class="flex flex-col lg:flex-row">
       <div
         class="text flex flex-1 flex-col items-center justify-center bg-center px-4 lg:ml-8 lg:items-start lg:px-0 lg:text-left xl:ml-[135px]"
