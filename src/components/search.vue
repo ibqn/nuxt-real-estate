@@ -7,7 +7,7 @@ import PriceRangeDropdown from "@/components/price-range-dropdown.vue"
 
 <template>
   <div
-    class="lg:shadow-1 relative mx-auto flex max-w-[1170px] flex-col justify-between gap-4 rounded-lg bg-white px-[30px] py-6 lg:-top-4 lg:flex-row lg:gap-3 lg:bg-transparent lg:backdrop-blur"
+    class="relative mx-auto flex max-w-[1170px] flex-col justify-between gap-4 rounded-lg bg-white px-[30px] py-6 lg:-top-4 lg:flex-row lg:gap-3 lg:bg-transparent lg:shadow-1 lg:backdrop-blur"
   >
     <CountryDropdown />
     <PropertyDropdown />
