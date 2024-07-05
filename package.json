@@ -12,8 +12,10 @@
   "dependencies": {
     "@nuxtjs/google-fonts": "^3.2.0",
     "@tanstack/vue-query": "^5.49.1",
+    "clsx": "^2.1.1",
     "lucide-vue-next": "^0.400.0",
     "nuxt": "^3.12.2",
+    "tailwind-merge": "^2.3.0",
     "vue": "latest"
   },
   "packageManager": "pnpm@9.4.0+sha256.b6fd0bfda555e7e584ad7e56b30c68b01d5a04f9ee93989f4b93ca8473c49c74",
