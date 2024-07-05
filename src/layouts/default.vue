@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import Header from "@/components/header.vue"
 import Footer from "@/components/footer.vue"
+import { VueQueryDevtools } from "@tanstack/vue-query-devtools"
 </script>
 
 <template>
+  <VueQueryDevtools />
   <div class="mx-auto max-w-[1440px] bg-white">
     <Header />
     <slot />

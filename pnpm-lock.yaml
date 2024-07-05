@@ -14,6 +14,9 @@ importers:
       '@tanstack/vue-query':
         specifier: ^5.49.1
         version: 5.49.1(vue@3.4.31)
+      '@tanstack/vue-query-devtools':
+        specifier: ^5.49.1
+        version: 5.49.1(@tanstack/vue-query@5.49.1(vue@3.4.31))(vue@3.4.31)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -33,6 +36,9 @@ importers:
       '@nuxtjs/tailwindcss':
         specifier: ^6.12.0
         version: 6.12.0(magicast@0.3.4)(rollup@4.18.0)
+      '@vue/devtools-api':
+        specifier: ^6.6.3
+        version: 6.6.3
       prettier-plugin-tailwindcss:
         specifier: ^0.6.5
         version: 0.6.5(prettier@3.3.2)
@@ -1058,6 +1064,15 @@ packages:
 
   '@tanstack/query-core@5.49.1':
     resolution: {integrity: sha512-JnC9ndmD1KKS01Rt/ovRUB1tmwO7zkyXAyIxN9mznuJrcNtOrkmOnQqdJF2ib9oHzc2VxHomnEG7xyfo54Npkw==}
+
+  '@tanstack/query-devtools@5.49.1':
+    resolution: {integrity: sha512-9mBtuq76fp+OE780ImoNG109bM7lucZ9MLPLzAkQ2OMx+X6s3BfVATySTxm1Mrtui3qJIFo05ZI4zv9A44+GAg==}
+
+  '@tanstack/vue-query-devtools@5.49.1':
+    resolution: {integrity: sha512-K3eYHK/eHka89Rue/Ju6gSUnsJZeHWA9ZYCwad7PjBQAuXiKlUumJMsD9zAgLo137UVsBENZlVEJouzIzUka9A==}
+    peerDependencies:
+      '@tanstack/vue-query': ^5.49.1
+      vue: ^3.3.0
 
   '@tanstack/vue-query@5.49.1':
     resolution: {integrity: sha512-/nTqP8PNCRzMcqTGEuFQE3ntUD3A+K05r6Dw/0hNwNS3PLEaKUKlxytmAhIoaoloQwbbAghjLyKRQZ+CMWv90A==}
@@ -4948,6 +4963,14 @@ snapshots:
       remove-accents: 0.5.0
 
   '@tanstack/query-core@5.49.1': {}
+
+  '@tanstack/query-devtools@5.49.1': {}
+
+  '@tanstack/vue-query-devtools@5.49.1(@tanstack/vue-query@5.49.1(vue@3.4.31))(vue@3.4.31)':
+    dependencies:
+      '@tanstack/query-devtools': 5.49.1
+      '@tanstack/vue-query': 5.49.1(vue@3.4.31)
+      vue: 3.4.31
 
   '@tanstack/vue-query@5.49.1(vue@3.4.31)':
     dependencies:
