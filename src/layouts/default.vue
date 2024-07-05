@@ -6,7 +6,7 @@ import Footer from "@/components/footer.vue"
 <template>
   <div class="mx-auto max-w-[1440px] bg-white">
     <Header />
-    <slot />
+    <slot></slot>
     <Footer />
   </div>
 </template>
