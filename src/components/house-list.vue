@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/vue-query"
 import { getHouses } from "@/apis/house"
 
 const { data: houses, suspense } = useQuery({
-  queryKey: ["test"],
+  queryKey: ["houses"],
   queryFn: getHouses,
 })
 await suspense()
@@ -13,7 +13,7 @@ await suspense()
 <template>
   <section class="mb-20">
     <div class="container mx-auto">
-      <div>
+      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-14">
         <NuxtLink
           v-for="(house, index) in houses"
           :key="house.id"
@@ -21,7 +21,6 @@ await suspense()
         >
           <House :index :house :key="house.id" />
         </NuxtLink>
-        <pre>{{ houses }}</pre>
       </div>
     </div>
   </section>
