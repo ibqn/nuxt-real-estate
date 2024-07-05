@@ -3,7 +3,7 @@ const active = inject<boolean>("active")
 </script>
 
 <template>
-  <div v-if="active">
+  <ul v-if="active">
     <slot />
-  </div>
+  </ul>
 </template>
