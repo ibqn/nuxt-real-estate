@@ -15,7 +15,6 @@ export const housesData: House[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
     image: "house1",
-    imageLg: "house1lg.png",
     country: "United States",
     address: "7240C Argyle St. Lawndale, CA 90260",
     bedrooms: 6,
@@ -36,7 +35,6 @@ export const housesData: House[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
     image: "house2",
-    imageLg: "house2lg",
     country: "Canada",
     address: "798 Talbot St. Bridgewater, NJ 08807",
     bedrooms: 6,
@@ -57,7 +55,6 @@ export const housesData: House[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
     image: "house3",
-    imageLg: "house3lg",
     country: "United States",
     address: "2 Glen Creek St. Alexandria, VA 22304",
     bedrooms: 6,
@@ -78,7 +75,6 @@ export const housesData: House[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
     image: "house4",
-    imageLg: "house4lg",
     country: "Canada",
     address: "84 Woodland St. Cocoa, FL 32927",
     bedrooms: 6,
@@ -99,7 +95,6 @@ export const housesData: House[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
     image: "house5",
-    imageLg: "house5lg",
     country: "United States",
     address: "28 Westport Dr. Warminster, PA 18974",
     bedrooms: 5,
@@ -120,7 +115,6 @@ export const housesData: House[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
     image: "house6",
-    imageLg: "house6lg",
     country: "Canada",
     address: "32 Pawnee Street Butte, MT 59701",
     bedrooms: 6,
@@ -141,7 +135,6 @@ export const housesData: House[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
     image: "apartment1",
-    imageLg: "apartment1lg",
     country: "Canada",
     address: "32 Pawnee Street Butte, MT 59701",
     bedrooms: 2,
@@ -162,7 +155,6 @@ export const housesData: House[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
     image: "apartment2",
-    imageLg: "apartment2lg",
     country: "United States",
     address: "28 Westport Dr. Warminster, PA 18974",
     bedrooms: 3,
@@ -183,7 +175,6 @@ export const housesData: House[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
     image: "apartment3",
-    imageLg: "apartment3lg",
     country: "United States",
     address: "84 Woodland St. Cocoa, FL 32927",
     bedrooms: 2,
@@ -204,7 +195,6 @@ export const housesData: House[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
     image: "house7",
-    imageLg: "house7lg",
     country: "Canada",
     address: "7240C Argyle St. Lawndale, CA 90260",
     bedrooms: 5,
@@ -225,7 +215,6 @@ export const housesData: House[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
     image: "house8",
-    imageLg: "house8lg",
     country: "Canada",
     address: "798 Talbot St. Bridgewater, NJ 08807",
     bedrooms: 7,
@@ -246,7 +235,6 @@ export const housesData: House[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
     image: "house9",
-    imageLg: "house9lg",
     country: "United States",
     address: "2 Glen Creek St. Alexandria, VA 22304",
     bedrooms: 4,
@@ -267,7 +255,6 @@ export const housesData: House[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
     image: "house10",
-    imageLg: "house10lg",
     country: "Canada",
     address: "84 Woodland St. Cocoa, FL 32927",
     bedrooms: 5,
@@ -288,7 +275,6 @@ export const housesData: House[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
     image: "house11",
-    imageLg: "house11lg",
     country: "United States",
     address: "28 Westport Dr. Warminster, PA 18974",
     bedrooms: 5,
@@ -309,7 +295,6 @@ export const housesData: House[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
     image: "house12",
-    imageLg: "House12lg",
     country: "Canada",
     address: "32 Pawnee Street Butte, MT 59701",
     bedrooms: 4,
@@ -330,7 +315,6 @@ export const housesData: House[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
     image: "apartment4",
-    imageLg: "apartment4lg",
     country: "Canada",
     address: "32 Pawnee Street Butte, MT 59701",
     bedrooms: 2,
@@ -351,7 +335,6 @@ export const housesData: House[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
     image: "apartment5",
-    imageLg: "apartment5lg",
     country: "United States",
     address: "28 Westport Dr. Warminster, PA 18974",
     bedrooms: 3,
@@ -372,7 +355,6 @@ export const housesData: House[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
     image: "apartment6",
-    imageLg: "apartment6lg",
     country: "Canada",
     address: "84 Woodland St. Cocoa, FL 32927",
     bedrooms: 3,
@@ -391,7 +373,6 @@ export const housesData: House[] = [
     ({
       ...house,
       image: imageMapper(house.type, house.image),
-      imageLg: imageMapper(house.type, house.imageLg),
       agent: { ...house.agent, image: `/agents/${house.agent.image}.png` },
     }) satisfies House as House
 )

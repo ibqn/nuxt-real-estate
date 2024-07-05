@@ -4,7 +4,6 @@ export type House = {
   name: string
   description: string
   image: string
-  imageLg: string
   country: string
   address: string
   bedrooms: number

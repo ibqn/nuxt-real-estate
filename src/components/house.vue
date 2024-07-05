@@ -14,7 +14,11 @@ const props = defineProps<Props>()
   <div
     class="mx-auto w-full max-w-[352px] cursor-pointer rounded-lg rounded-tl-[90px] bg-white p-5 shadow-1 transition hover:shadow-2xl"
   >
-    <img :src="props.house.image" :alt="props.house.name" class="mb-8" />
+    <img
+      :src="props.house.image"
+      :alt="props.house.name"
+      class="mb-8 aspect-square h-full w-full rounded-lg rounded-br-[90px] rounded-tl-[90px] object-cover"
+    />
     <div class="mb-4 flex gap-x-2 text-sm">
       <div class="rounded-full bg-green-500 px-3 text-white">
         {{ props.house.type }}
