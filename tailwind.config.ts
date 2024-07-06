@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+import forms from "@tailwindcss/forms"
 
 const config: Partial<Config> = {
   theme: {
@@ -28,7 +29,7 @@ const config: Partial<Config> = {
       },
     },
   },
-  plugins: [],
+  plugins: [forms],
 }
 
 export default config
