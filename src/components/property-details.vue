@@ -89,7 +89,7 @@ await suspense()
             </div>
           </div>
 
-          <form @submit="onSubmit">
+          <form @submit="onSubmit" class="flex flex-col gap-4">
             <input
               v-model="name"
               v-bind="nameAttrs"
@@ -129,7 +129,7 @@ await suspense()
                 send message
               </button>
               <button
-                class="w-full rounded-lg border p-4 text-sm capitalize text-violet-700 transition hover:border-violet-500 hover:text-violet-500"
+                class="w-full rounded-lg border border-violet-700 p-4 text-sm capitalize text-violet-700 transition hover:border-violet-500 hover:text-violet-500"
               >
                 call
               </button>
