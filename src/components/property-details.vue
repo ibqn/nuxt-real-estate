@@ -3,8 +3,13 @@ import { useQuery } from "@tanstack/vue-query"
 import { getHouseById } from "@/apis/house"
 import { Bath, BedDouble, Scaling } from "lucide-vue-next"
 import { useForm } from "vee-validate"
+import { toTypedSchema } from "@vee-validate/zod"
+import { formSchema, type FormSchema } from "@/validators/form"
 
-const { handleSubmit, defineField } = useForm()
+const validationSchema = toTypedSchema(formSchema)
+const { handleSubmit, defineField, errors } = useForm<FormSchema>({
+  validationSchema,
+})
 
 const [name, nameAttrs] = defineField("name")
 const [email, emailAttrs] = defineField("email")
@@ -90,36 +95,56 @@ await suspense()
           </div>
 
           <form @submit="onSubmit" class="flex flex-col gap-4">
-            <input
-              v-model="name"
-              v-bind="nameAttrs"
-              placeholder="Name*"
-              type="text"
-              class="h-14 w-full rounded border border-gray-300 px-4 text-sm outline-none focus:border-violet-700"
-            />
+            <div>
+              <input
+                v-model="name"
+                v-bind="nameAttrs"
+                placeholder="Name*"
+                type="text"
+                class="h-14 w-full rounded border border-gray-300 px-4 text-sm outline-none focus:border-violet-700"
+              />
+              <div v-if="errors.name" class="text-sm text-rose-500">
+                {{ errors.name }}
+              </div>
+            </div>
 
-            <input
-              v-model="email"
-              v-bind="emailAttrs"
-              placeholder="Email*"
-              type="email"
-              class="h-14 w-full rounded border border-gray-300 px-4 text-sm outline-none focus:border-violet-700"
-            />
+            <div>
+              <input
+                v-model="email"
+                v-bind="emailAttrs"
+                placeholder="Email*"
+                type="email"
+                class="h-14 w-full rounded border border-gray-300 px-4 text-sm outline-none focus:border-violet-700"
+              />
+              <div v-if="errors.email" class="text-sm text-rose-500">
+                {{ errors.email }}
+              </div>
+            </div>
 
-            <input
-              v-model="phone"
-              v-bind="phoneAttrs"
-              placeholder="Phone number*"
-              type="text"
-              class="h-14 w-full rounded border border-gray-300 px-4 text-sm outline-none focus:border-violet-700"
-            />
+            <div>
+              <input
+                v-model="phone"
+                v-bind="phoneAttrs"
+                placeholder="Phone number*"
+                type="text"
+                class="h-14 w-full rounded border border-gray-300 px-4 text-sm outline-none focus:border-violet-700"
+              />
+              <div v-if="errors.phone" class="text-sm text-rose-500">
+                {{ errors.phone }}
+              </div>
+            </div>
 
-            <textarea
-              class="h-36 w-full resize-none rounded border border-gray-300 px-4 text-sm outline-none focus:border-violet-700"
-              v-model="message"
-              v-bind="messageAttrs"
-              placeholder="Message*"
-            ></textarea>
+            <div>
+              <textarea
+                class="h-36 w-full resize-none rounded border border-gray-300 px-4 text-sm outline-none focus:border-violet-700"
+                v-model="message"
+                v-bind="messageAttrs"
+                placeholder="Message*"
+              ></textarea>
+              <div v-if="errors.message" class="text-sm text-rose-500">
+                {{ errors.message }}
+              </div>
+            </div>
 
             <div class="flex flex-col gap-2 md:flex-row">
               <button

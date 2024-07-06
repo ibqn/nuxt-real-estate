@@ -7,4 +7,4 @@ export const formSchema = z.object({
   message: z.string(),
 })
 
-export type formSchema = z.infer<typeof formSchema>
+export type FormSchema = z.infer<typeof formSchema>
