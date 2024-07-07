@@ -4,16 +4,19 @@ import { useQuery } from "@tanstack/vue-query"
 import { ChevronUp, House } from "lucide-vue-next"
 import { cn } from "@/utils/class-names"
 import { getProperties } from "~/apis/property"
+import { useSearchStore } from "@/stores/search"
 
-const defaultProperty = "Property (any)"
-const selectedProperty = ref<string>(defaultProperty)
+const store = useSearchStore()
 
 const { data, suspense } = useQuery({
   queryKey: ["properties"],
   queryFn: getProperties,
 })
 
-const properties = computed(() => [defaultProperty, ...(data.value ?? [])])
+const properties = computed(() => [
+  store.defaultProperty,
+  ...(data.value ?? []),
+])
 await suspense()
 </script>
 
@@ -25,7 +28,7 @@ await suspense()
 
         <div>
           <div class="text-[15px] font-medium leading-tight">
-            {{ selectedProperty }}
+            {{ store.property }}
           </div>
           <div class="text-[13px]">Select your place</div>
         </div>
@@ -43,6 +46,7 @@ await suspense()
 
     <DropdownContent class="dropdown-content">
       <DropdownItem
+        @click="store.setProperty(property)"
         v-for="(property, index) in properties"
         :key="index"
         class="dropdown-item"
