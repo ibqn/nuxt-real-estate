@@ -3,29 +3,33 @@ import { Dropdown, DropdownContent, DropdownItem } from "@/components/dropdown"
 import { useQuery } from "@tanstack/vue-query"
 import { ChevronUp, Wallet } from "lucide-vue-next"
 import { cn } from "@/utils/class-names"
-import { getProperties } from "~/apis/property"
+import { useSearchStore } from "@/stores/search"
+import { getPriceRanges } from "@/apis/price-range"
+import type { PriceRange } from "@/types"
 
-const defaultPrice = "Price range (any)"
-const selectedPriceRange = ref<string>(defaultPrice)
+const store = useSearchStore()
 
 const { data, suspense } = useQuery({
-  queryKey: ["properties"],
-  queryFn: getProperties,
+  queryKey: ["price-ranges"],
+  queryFn: getPriceRanges,
 })
 
-const properties = computed(() => [defaultPrice, ...(data.value ?? [])])
+const priceRanges = computed(() => [
+  store.defaultPriceRange,
+  ...(data.value?.map((range: PriceRange) => range.label) ?? []),
+])
 await suspense()
 </script>
 
 <template>
-  <Dropdown class="dropdown">
+  <Dropdown class="dropdown lg:max-w-[320px]">
     <template #toggler="slotProps">
       <button class="dropdown-btn w-full text-left">
         <Wallet class="dropdown-icon-primary" />
 
-        <div>
+        <div class="mr-2">
           <div class="text-[15px] font-medium leading-tight">
-            {{ selectedPriceRange }}
+            {{ store.priceRange }}
           </div>
           <div class="text-[13px]">Select your price range</div>
         </div>
@@ -43,11 +47,12 @@ await suspense()
 
     <DropdownContent class="dropdown-content">
       <DropdownItem
-        v-for="(property, index) in properties"
+        @click="store.setPriceRange(priceRange)"
+        v-for="(priceRange, index) in priceRanges"
         :key="index"
         class="dropdown-item"
       >
-        {{ property }}
+        {{ priceRange }}
       </DropdownItem>
     </DropdownContent>
   </Dropdown>
