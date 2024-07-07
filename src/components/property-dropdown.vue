@@ -3,7 +3,7 @@ import { Dropdown, DropdownContent, DropdownItem } from "@/components/dropdown"
 import { useQuery } from "@tanstack/vue-query"
 import { ChevronUp, House } from "lucide-vue-next"
 import { cn } from "@/utils/class-names"
-import { getProperties } from "~/apis/property"
+import { getProperties } from "@/apis/property"
 import { useSearchStore } from "@/stores/search"
 
 const store = useSearchStore()
