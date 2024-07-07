@@ -19,3 +19,9 @@ export type Agent = {
   name: string
   phone: string
 }
+
+export type PriceRange = {
+  start: number
+  end: number
+  label: string
+}
