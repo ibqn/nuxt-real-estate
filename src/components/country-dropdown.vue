@@ -4,16 +4,16 @@ import { useQuery } from "@tanstack/vue-query"
 import { getCountries } from "@/apis/country"
 import { ChevronUp, MapPin } from "lucide-vue-next"
 import { cn } from "@/utils/class-names"
+import { useSearchStore } from "@/stores/search"
 
-const defaultLocation = "Location (any)"
-const selectedCountry = ref<string>(defaultLocation)
+const store = useSearchStore()
 
 const { data, suspense } = useQuery({
   queryKey: ["countries"],
   queryFn: getCountries,
 })
 
-const countries = computed(() => [defaultLocation, ...(data.value ?? [])])
+const countries = computed(() => [store.defaultLocation, ...(data.value ?? [])])
 await suspense()
 </script>
 
@@ -25,7 +25,7 @@ await suspense()
 
         <div>
           <div class="text-[15px] font-medium leading-tight">
-            {{ selectedCountry }}
+            {{ store.location }}
           </div>
           <div class="text-[13px]">Select your place</div>
         </div>
@@ -43,6 +43,7 @@ await suspense()
 
     <DropdownContent class="dropdown-content">
       <DropdownItem
+        @click="store.setLocation(country)"
         v-for="(country, index) in countries"
         :key="index"
         class="dropdown-item"
