@@ -1,7 +1,9 @@
+import type { PriceRange } from "@/types"
+
 export const useSearchStore = defineStore("search", () => {
   const defaultLocation = "Location (any)"
   const defaultProperty = "Property (any)"
-  const defaultPriceRange = "Price range (any)"
+  const defaultPriceRange: PriceRange = { label: "Price range (any)" }
 
   const location = ref(defaultLocation)
   const property = ref(defaultProperty)
@@ -13,7 +15,7 @@ export const useSearchStore = defineStore("search", () => {
 
   const setLocation = (newLocation: string) => (location.value = newLocation)
   const setProperty = (newProperty: string) => (property.value = newProperty)
-  const setPriceRange = (newPriceRange: string) =>
+  const setPriceRange = (newPriceRange: PriceRange) =>
     (priceRange.value = newPriceRange)
 
   return {

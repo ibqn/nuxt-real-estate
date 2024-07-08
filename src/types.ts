@@ -21,7 +21,7 @@ export type Agent = {
 }
 
 export type PriceRange = {
-  start: number
-  end: number
+  start?: number
+  end?: number
   label: string
 }

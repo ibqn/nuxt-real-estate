@@ -18,6 +18,8 @@ const updateSearch = () => {
       store.location === store.defaultLocation ? undefined : store.location,
     property:
       store.property === store.defaultProperty ? undefined : store.property,
+    start: store.priceRange.start,
+    end: store.priceRange.end,
   }
 
   store.setSearchQuery(qs.stringify(queryParams))

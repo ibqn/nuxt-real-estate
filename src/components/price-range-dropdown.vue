@@ -5,7 +5,6 @@ import { ChevronUp, Wallet } from "lucide-vue-next"
 import { cn } from "@/utils/class-names"
 import { useSearchStore } from "@/stores/search"
 import { getPriceRanges } from "@/apis/price-range"
-import type { PriceRange } from "@/types"
 
 const store = useSearchStore()
 
@@ -16,7 +15,7 @@ const { data, suspense } = useQuery({
 
 const priceRanges = computed(() => [
   store.defaultPriceRange,
-  ...(data.value?.map((range: PriceRange) => range.label) ?? []),
+  ...(data.value ?? []),
 ])
 await suspense()
 </script>
@@ -29,7 +28,7 @@ await suspense()
 
         <div class="mr-2">
           <div class="text-[15px] font-medium leading-tight">
-            {{ store.priceRange }}
+            {{ store.priceRange.label }}
           </div>
           <div class="text-[13px]">Select your price range</div>
         </div>
@@ -52,7 +51,7 @@ await suspense()
         :key="index"
         class="dropdown-item"
       >
-        {{ priceRange }}
+        {{ priceRange.label }}
       </DropdownItem>
     </DropdownContent>
   </Dropdown>
