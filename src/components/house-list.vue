@@ -2,10 +2,13 @@
 import House from "@/components/house.vue"
 import { useQuery } from "@tanstack/vue-query"
 import { getHouses } from "@/apis/house"
+import { useSearchStore } from "@/stores/search"
+
+const store = useSearchStore()
 
 const { data: houses, suspense } = useQuery({
   queryKey: ["houses"],
-  queryFn: getHouses,
+  queryFn: () => getHouses(store.searchQuery),
 })
 await suspense()
 </script>

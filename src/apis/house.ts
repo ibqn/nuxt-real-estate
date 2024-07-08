@@ -1,5 +1,5 @@
-export const getHouses = async () => {
-  const houses = await $fetch("/api/houses")
+export const getHouses = async (queryString: string) => {
+  const houses = await $fetch(`/api/houses?${queryString}`)
   return houses
 }
 

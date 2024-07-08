@@ -4,6 +4,27 @@ import CountryDropdown from "@/components/country-dropdown.vue"
 import PropertyDropdown from "@/components/property-dropdown.vue"
 import PriceRangeDropdown from "@/components/price-range-dropdown.vue"
 import { cn } from "@/utils/class-names"
+import { useSearchStore } from "@/stores/search"
+import qs from "query-string"
+import { useQueryClient } from "@tanstack/vue-query"
+
+const queryClient = useQueryClient()
+
+const store = useSearchStore()
+
+const updateSearch = () => {
+  let queryParams = {
+    location:
+      store.location === store.defaultLocation ? undefined : store.location,
+    property:
+      store.property === store.defaultProperty ? undefined : store.property,
+  }
+
+  store.setSearchQuery(qs.stringify(queryParams))
+  console.log("Search query", store.searchQuery)
+
+  queryClient.invalidateQueries({ queryKey: ["houses"] })
+}
 </script>
 
 <template>
@@ -19,6 +40,7 @@ import { cn } from "@/utils/class-names"
     <PropertyDropdown />
     <PriceRangeDropdown />
     <button
+      @click="updateSearch"
       class="flex h-16 w-full items-center justify-center rounded-lg bg-violet-700 text-lg text-white transition hover:bg-violet-800 lg:max-w-[162px]"
     >
       <Search />

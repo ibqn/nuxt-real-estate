@@ -7,6 +7,10 @@ export const useSearchStore = defineStore("search", () => {
   const property = ref(defaultProperty)
   const priceRange = ref(defaultPriceRange)
 
+  const searchQuery = ref("")
+  const setSearchQuery = (newSearchQuery: string) =>
+    (searchQuery.value = newSearchQuery)
+
   const setLocation = (newLocation: string) => (location.value = newLocation)
   const setProperty = (newProperty: string) => (property.value = newProperty)
   const setPriceRange = (newPriceRange: string) =>
@@ -19,8 +23,12 @@ export const useSearchStore = defineStore("search", () => {
     setLocation,
     setProperty,
     setPriceRange,
+
     defaultLocation,
     defaultProperty,
     defaultPriceRange,
+
+    searchQuery,
+    setSearchQuery,
   }
 })
