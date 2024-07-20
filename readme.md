@@ -1,6 +1,12 @@
-# Nuxt 3 Minimal Starter
+# Nuxt Real Estate
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Home page
+
+![Home page](/screenshots/home-page.png)
+
+## Property page
+
+![Property page](/screenshots/property-page.png)
 
 ## Setup
 
